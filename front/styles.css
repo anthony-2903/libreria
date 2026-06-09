@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f1f1f1;
+    color: #222;
+}
+
+header {
+    background: #255c99;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    width: 95%;
+    margin: 20px auto;
+}
+
+.panel {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #255c99;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 8px;
+    border: 1px solid #999;
+}
+
+textarea {
+    min-height: 70px;
+    resize: vertical;
+}
+
+.botones {
+    grid-column: 1 / 3;
+}
+
+button {
+    padding: 8px 12px;
+    border: 1px solid #444;
+    background: #e7e7e7;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d0d0d0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    border: 1px solid #aaa;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #ddd;
+}
+
+#mensaje {
+    width: 95%;
+    margin: 10px auto 25px;
+    font-weight: bold;
+    color: #255c99;
+}
+
+@media (max-width: 700px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .botones {
+        grid-column: 1;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HistoriaDB Biblioteca</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>HistoriaDB</h1>
+        <p>Gestion de biblioteca</p>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>Idiomas</h2>
+            <form id="formIdioma">
+                <input type="hidden" id="idiomaId">
+                <label>Nombre</label>
+                <input type="text" id="idiomaNombre" required>
+                <div class="botones">
+                    <button type="submit">Guardar idioma</button>
+                    <button type="button" id="limpiarIdioma">Limpiar</button>
+                </div>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaIdiomas"></tbody>
+            </table>
+        </section>
+
+        <section class="panel">
+            <h2>Categorias</h2>
+            <form id="formCategoria">
+                <input type="hidden" id="categoriaId">
+                <label>Nombre</label>
+                <input type="text" id="categoriaNombre" required>
+                <div class="botones">
+                    <button type="submit">Guardar categoria</button>
+                    <button type="button" id="limpiarCategoria">Limpiar</button>
+                </div>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaCategorias"></tbody>
+            </table>
+        </section>
+
+        <section class="panel">
+            <h2>Autores</h2>
+            <form id="formAutor">
+                <input type="hidden" id="autorId">
+                <label>Nombre</label>
+                <input type="text" id="autorNombre" required>
+                <label>ID Pais</label>
+                <input type="number" id="autorPais">
+                <label>Email</label>
+                <input type="email" id="autorEmail">
+                <label>Website</label>
+                <input type="url" id="autorWebsite">
+                <label>Acerca de</label>
+                <textarea id="autorAcerca" maxlength="500"></textarea>
+                <div class="botones">
+                    <button type="submit">Guardar autor</button>
+                    <button type="button" id="limpiarAutor">Limpiar</button>
+                </div>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaAutores"></tbody>
+            </table>
+        </section>
+
+        <section class="panel">
+            <h2>Editoriales</h2>
+            <form id="formEditorial">
+                <input type="hidden" id="editorialId">
+                <label>Nombre</label>
+                <input type="text" id="editorialNombre" required>
+                <label>Direccion</label>
+                <input type="text" id="editorialDireccion">
+                <label>ID Pais</label>
+                <input type="number" id="editorialPais">
+                <label>Email</label>
+                <input type="email" id="editorialEmail">
+                <label>Telefono</label>
+                <input type="text" id="editorialTelefono">
+                <label>Fax</label>
+                <input type="text" id="editorialFax">
+                <label>Website</label>
+                <input type="url" id="editorialWebsite">
+                <label>CP</label>
+                <input type="text" id="editorialCp">
+                <div class="botones">
+                    <button type="submit">Guardar editorial</button>
+                    <button type="button" id="limpiarEditorial">Limpiar</button>
+                </div>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Telefono</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaEditoriales"></tbody>
+            </table>
+        </section>
+
+        <section class="panel">
+            <h2>Libros</h2>
+            <form id="formLibro">
+                <input type="hidden" id="libroEditando">
+                <label>ISBN</label>
+                <input type="number" id="libroIsbn" required>
+                <label>Titulo</label>
+                <input type="text" id="libroTitulo" required>
+                <label>Autor</label>
+                <select id="libroAutor" required></select>
+                <label>Editorial</label>
+                <select id="libroEditorial" required></select>
+                <label>Categoria</label>
+                <select id="libroCategoria" required></select>
+                <label>Idioma</label>
+                <select id="libroIdioma" required></select>
+                <label>Stock</label>
+                <input type="number" id="libroStock">
+                <label>Fecha publicacion</label>
+                <input type="date" id="libroFecha">
+                <div class="botones">
+                    <button type="submit">Guardar libro</button>
+                    <button type="button" id="limpiarLibro">Limpiar</button>
+                </div>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ISBN</th>
+                        <th>Titulo</th>
+                        <th>Autor</th>
+                        <th>Editorial</th>
+                        <th>Categoria</th>
+                        <th>Idioma</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaLibros"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <p id="mensaje"></p>
+
+    <script src="app.js"></script>
+</body>
+</html>
